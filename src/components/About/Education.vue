@@ -34,9 +34,9 @@ onMounted(() => {
 
   gsap.fromTo(
     rows,
-    { x: 20, opacity: 0 },
+    { y: 20, opacity: 0 },
     {
-      x: 0,
+      y: 0,
       opacity: 1,
       duration: 0.5,
       stagger: 0.2, // Adjust stagger duration
@@ -60,7 +60,11 @@ td {
 
 thead {
   font-weight: bold;
-  @apply bg-primary/40;
+  @apply bg-primary/40 transition-colors duration-300;
+}
+
+thead:hover {
+  @apply bg-primary/80;
 }
 
 tbody tr {

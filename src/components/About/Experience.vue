@@ -22,6 +22,12 @@
                     <td>Siruseri</td>
                     <td>Aug 2024 - Oct 2024</td>
                 </tr>
+                <tr>
+                    <td>Project</td>
+                    <td>Tata Consultancy Services</td>
+                    <td>Velachery</td>
+                    <td>Oct 2024 - Present</td>
+                </tr>
             </tbody>
         </table>
     </div>
@@ -41,7 +47,11 @@ td {
 
 thead {
     font-weight: bold;
-    @apply bg-primary/40;
+    @apply bg-primary/40 transition-colors duration-300;
+}
+
+thead:hover {
+    @apply bg-primary/80;
 }
 
 tbody tr {

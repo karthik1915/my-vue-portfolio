@@ -12,22 +12,24 @@
       <section id="who-am-i">
         <h2>Who Am I ?</h2>
         <p>
-          &emsp;I'm Karthikeyan J from Korattur, Chennai, Tamil Nadu, India. A
-          Graduated Engineer who is passionate about Software Development and
-          Project Management. I am constantly seeking knowledge for career
-          improvement and keeping track of current trends in technology. My
-          drive to stay updated with the latest advancements ensures that I can
-          deliver innovative and efficient solutions in my projects.
+          &emsp;I'm <mark>Karthikeyan J</mark> from <mark>Korattur, Chennai, Tamil Nadu, India</mark>.
+          A Graduated Engineer who is passionate about <mark>Software Development</mark> and
+          <mark>Project Management</mark>. I am constantly seeking knowledge for career
+          improvement and keeping track of <mark>current trends in technology</mark>.
+          My drive to stay updated with the latest advancements ensures that I can
+          deliver <mark>innovative and efficient solutions</mark> in my projects.
         </p>
+
       </section>
       <section id="what-i-do">
         <h2>What I Do ?</h2>
         <p>
-          &emsp;I am a Full Stack Developer with a passion for building scalable
-          and maintainable web applications. I have worked on a wide range of
-          projects from web applications to mobile applications. I am proficient
-          in the following technologies:
+          &emsp;I am a <mark>Full Stack Developer</mark> with a passion for building
+          <mark>scalable</mark> and <mark>maintainable web applications</mark>.
+          I have worked on a wide range of projects from <mark>web applications</mark>
+          to <mark>mobile applications</mark>. I am proficient in the following technologies:
         </p>
+
         <Skills />
       </section>
       <section id="education">

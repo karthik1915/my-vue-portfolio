@@ -19,7 +19,7 @@
     </div>
     <div class="hidden md:block">
       <button
-        class="px-6 py-2 ring-1 ring-primary hover:bg-primary hover:text-notblack rounded-xl font-varelaround text-md"
+        class="px-6 py-2 ring-1 ring-primary hover:bg-primary hover:text-notblack rounded-xl transition-colors duration-300 font-varelaround text-md"
         href="#">
         Talk with Me
       </button>

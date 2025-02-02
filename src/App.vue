@@ -11,15 +11,17 @@ const isHomeRoute = computed(() => route.path === "/");
 </script>
 
 <template>
-  <main
-    :class="[
-      'grid',
-      isHomeRoute
-        ? 'grid-rows-[80px_1fr] lg:grid-cols-2 min-h-screen'
-        : 'grid-rows-[80px_1fr]',
-    ]"
-  >
+  <main :class="[
+    'grid',
+    isHomeRoute
+      ? 'grid-rows-[80px_1fr] lg:grid-cols-2 min-h-screen'
+      : 'grid-rows-[80px_1fr]',
+  ]">
     <Navbar :is-home-route="isHomeRoute" />
-    <router-view />
+    <router-view v-slot="{ Component }">
+      <transition>
+        <component :is="Component" />
+      </transition>
+    </router-view>
   </main>
 </template>
