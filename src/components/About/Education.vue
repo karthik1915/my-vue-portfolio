@@ -20,47 +20,43 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
-import gsap from 'gsap';
+import { ref } from "vue";
 
 const tableData = ref([
-  { qualification: 'SSLC', marks: '430/500', year: '2018' },
-  { qualification: 'HSC - Computer Science', marks: '470/600', year: '2020' },
-  { qualification: 'B.E - Electronics and Communication Engineering', marks: '8.40', year: '2024' },
+  { qualification: "SSLC", marks: "430/500", year: "2018" },
+  { qualification: "HSC - Computer Science", marks: "470/600", year: "2020" },
+  {
+    qualification: "B.E - Electronics and Communication Engineering",
+    marks: "8.40",
+    year: "2024",
+  },
 ]);
-
-onMounted(() => {
-  const rows = document.querySelectorAll('tbody tr, thead');
-
-  gsap.fromTo(
-    rows,
-    { y: 20, opacity: 0 },
-    {
-      y: 0,
-      opacity: 1,
-      duration: 0.5,
-      stagger: 0.2, // Adjust stagger duration
-      ease: 'power2.out',
-    }
-  );
-});
 </script>
 
 <style scoped>
 table {
   table-layout: fixed;
   width: 100%;
+  border: 1px solid theme("colors.primary");
+  /* Border for the whole table */
+  border-collapse: collapse;
 }
 
 th,
 td {
   padding: 4px 8px;
+  border: 1px solid theme("colors.primary");
+  /* Border for each cell */
   transition: background-color 0.3s ease;
 }
 
 thead {
-  font-weight: bold;
+  font: "goodtimes";
+  font-weight: semibold;
+  letter-spacing: 1px;
   @apply bg-primary/40 transition-colors duration-300;
+  border-bottom: 1px solid theme("colors.primary");
+  /* Bottom border for the header */
 }
 
 thead:hover {
@@ -69,14 +65,12 @@ thead:hover {
 
 tbody tr {
   transition: background-color 0.3s ease;
+  border-bottom: 1px solid theme("colors.primary");
+  /* Border for rows */
 }
 
 tbody tr:hover {
-  @apply hover:bg-secondary;
-}
-
-tbody tr:not(:last-child) {
-  border-bottom: 10px solid transparent;
+  @apply bg-secondary;
 }
 
 td {

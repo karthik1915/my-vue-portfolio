@@ -33,7 +33,7 @@
 }
 
 .content-1 {
-    @apply hidden md:block w-52 h-28 top-[20px] left-[20px] bg-primary
+    @apply hidden md:block w-52 h-28 top-[20px] left-[20px] bg-white ring-primary ring-4
 }
 
 .content-1>svg {
@@ -41,7 +41,7 @@
 }
 
 .content-2 {
-    @apply hidden md:block w-52 h-28 bottom-[20px] left-[60px] bg-primary
+    @apply hidden md:block w-52 h-28 bottom-[20px] left-[60px] bg-white ring-primary ring-4
 }
 
 .content-2>svg {
@@ -49,7 +49,7 @@
 }
 
 .content-3 {
-    @apply hidden md:block right-[25px] bottom-[150px] bg-primary
+    @apply hidden md:block right-[25px] bottom-[150px] bg-white ring-primary ring-4
 }
 
 .content-3>svg {

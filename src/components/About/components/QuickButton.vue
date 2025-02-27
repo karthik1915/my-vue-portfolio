@@ -1,7 +1,7 @@
 <template>
-  <div class="p-2 bg-primary border rounded-r-2xl" @click="handleClick">
+  <a @click="handleClick" class="p-2 bg-primary border rounded-r-2xl">
     <img :src="src" :alt="alt" width="24" height="24" />
-  </div>
+  </a>
 </template>
 
 <script setup lang="ts">
@@ -14,16 +14,22 @@ const props = defineProps({
     type: String,
     required: true,
   },
-  onClick: {
-    type: Function,
+  scrollTo: {
+    type: String,
     required: true,
   },
 });
 
 const emits = defineEmits(["click"]);
 
-function handleClick() {
+const handleClick = () => {
+  // Emit the click event
   emits("click");
-  props.onClick();
-}
+
+  // Scroll to the specified section
+  const element = document.getElementById(props.scrollTo);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+};
 </script>

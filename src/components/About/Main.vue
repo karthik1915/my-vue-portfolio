@@ -1,9 +1,15 @@
 <template>
   <header id="heading" class="text-center text-4xl font-telegraf my-6">
-    About Me
+    <h1>About Me</h1>
   </header>
-  <div id="about-main" class="grid md:grid-cols-[0.6fr_1fr] mx-auto max-w-screen-2xl">
-    <div id="hero-image-about" class="flex items-center justify-center md:justify-start md:flex-col mb-8 px-2">
+  <div
+    id="about-main"
+    class="md:grid relative md:grid-cols-[0.6fr_1fr] mx-auto max-w-screen-2xl"
+  >
+    <div
+      id="hero-image-about"
+      class="flex items-center justify-center md:justify-start md:flex-col mb-8 md:mb-0 px-2 md:h-fit md:sticky relative md:top-[4rem]"
+    >
       <HeroImage />
       <QuickButtons />
       <QuickLink />
@@ -12,22 +18,25 @@
       <section id="who-am-i">
         <h2>Who Am I ?</h2>
         <p>
-          &emsp;I'm <mark>Karthikeyan J</mark> from <mark>Korattur, Chennai, Tamil Nadu, India</mark>.
-          A Graduated Engineer who is passionate about <mark>Software Development</mark> and
-          <mark>Project Management</mark>. I am constantly seeking knowledge for career
-          improvement and keeping track of <mark>current trends in technology</mark>.
-          My drive to stay updated with the latest advancements ensures that I can
-          deliver <mark>innovative and efficient solutions</mark> in my projects.
+          &emsp;I'm <mark>Karthikeyan J</mark> from
+          <mark>Korattur, Chennai, Tamil Nadu, India</mark>. A Graduated
+          Engineer who is passionate about <mark>Software Development</mark> and
+          <mark>Project Management</mark>. I am constantly seeking knowledge for
+          career improvement and keeping track of
+          <mark>current trends in technology</mark>. My drive to stay updated
+          with the latest advancements ensures that I can deliver
+          <mark>innovative and efficient solutions</mark> in my projects.
         </p>
-
       </section>
       <section id="what-i-do">
         <h2>What I Do ?</h2>
         <p>
-          &emsp;I am a <mark>Full Stack Developer</mark> with a passion for building
-          <mark>scalable</mark> and <mark>maintainable web applications</mark>.
-          I have worked on a wide range of projects from <mark>web applications</mark>
-          to <mark>mobile applications</mark>. I am proficient in the following technologies:
+          &emsp;I am a <mark>Full Stack Developer</mark> with a passion for
+          building <mark>scalable</mark> and
+          <mark>maintainable web applications</mark>. I have worked on a wide
+          range of projects from <mark>web applications</mark> to
+          <mark>mobile applications</mark>. I am proficient in the following
+          technologies:
         </p>
 
         <Skills />
@@ -63,19 +72,18 @@ onMounted(() => {
   gsap.fromTo(
     "#heading",
     {
-      letterSpacing: '6px',
-      opacity: 0,  // Start from transparent
-      scale: 0.8,  // Add scale for a more dynamic effect
+      letterSpacing: "6px",
+      opacity: 0, // Start from transparent
+      scale: 0.8, // Add scale for a more dynamic effect
     },
     {
-      letterSpacing: '0px',
-      opacity: 1,  // Fade in
-      scale: 1,    // Scale back to normal
+      letterSpacing: "0px",
+      opacity: 1, // Fade in
+      scale: 1, // Scale back to normal
       duration: 1,
       ease: "elastic.out(1, 0.3)", // Change to elastic easing for a smoother bounce
     }
   );
-
 
   gsap.fromTo(
     "#about-me h2",

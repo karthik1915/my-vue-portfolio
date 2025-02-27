@@ -13,32 +13,20 @@ onMounted(() => {
     { x: 0, duration: 1, ease: "power3.out", stagger: 0.3 }
   );
 });
-
-// Function to handle button click and smooth scroll
-function handleButtonClick(hash: string) {
-  const targetElement = document.querySelector(hash) as HTMLElement | null;
-  if (targetElement) {
-    window.scrollTo({ top: targetElement.offsetTop, behavior: "smooth" });
-  }
-}
 </script>
 
 <template>
   <div class="md:hidden flex flex-col" id="quick-buttons">
-    <QuickButton
-      src="/assets/who.svg"
-      alt="person_who"
-      @click="handleButtonClick('#who-am-i')"
-    />
+    <QuickButton src="/assets/who.svg" alt="person_who" scroll-to="#who-am-i" />
     <QuickButton
       src="/assets/what.svg"
       alt="person_what"
-      @click="handleButtonClick('#what-i-do')"
+      scroll-to="#what-i-do"
     />
     <QuickButton
       src="/assets/education.svg"
       alt="education"
-      @click="handleButtonClick('#education')"
+      scroll-to="#education"
     />
   </div>
 </template>

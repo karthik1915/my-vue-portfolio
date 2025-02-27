@@ -9,7 +9,7 @@
           to="/projects"
           class="text-wrap text-2xl font-telegraf py-2 hover:underline hover:underline-offset-4 hover:decoration-primary"
         >
-          Projects Statistics 2024
+          Projects Statistics
         </RouterLink>
       </div>
       <div class="space-y-5">

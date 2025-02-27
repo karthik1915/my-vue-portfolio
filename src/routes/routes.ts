@@ -1,8 +1,4 @@
 import HomeView from "../components/Home/HomeView.vue";
-import AboutView from "../components/About/AboutView.vue";
-import ProjectView from "../components/Projects/ProjectView.vue";
-import InstagramCode from "../components/hidden/InstagramCode.vue";
-import UwuCode from "../components/hidden/uwu.vue";
 
 export const routes = [
   {
@@ -14,15 +10,23 @@ export const routes = [
   {
     path: "/about",
     name: "about",
-    component: AboutView,
+    component: () => import("../components/About/AboutView.vue"),
     meta: { title: "Karthikeyan J - About" },
   },
   {
     path: "/projects",
     name: "projects",
-    component: ProjectView,
+    component: () => import("../components/Projects/ProjectView.vue"),
     meta: { title: "Karthikeyan J - Projects" },
   },
-  { path: "/instagram-code", name: "instagram-code", component: InstagramCode },
-  { path: "/uwu", name: "uwu", component: UwuCode },
+  {
+    path: "/instagram-code",
+    name: "instagram-code",
+    component: () => import("../components/hidden/InstagramCode.vue"),
+  },
+  {
+    path: "/uwu",
+    name: "uwu",
+    component: () => import("../components/hidden/uwu.vue"),
+  },
 ];

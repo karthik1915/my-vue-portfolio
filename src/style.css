@@ -43,6 +43,11 @@
   font-display: swap;
 }
 
+html {
+  scrollbar-gutter: stable;
+  scroll-behavior: smooth;
+}
+
 body {
   @apply bg-background text-notblack;
 }

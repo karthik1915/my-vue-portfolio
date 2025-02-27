@@ -15,7 +15,7 @@
 
 <style scoped>
 article {
-  @apply inline py-1 relative px-4 mx-4 my-1 lg:my-2 shadow-sm hover:shadow-lg cursor-pointer bg-gradient-to-r to-[#FAAB78] via-50% via-[#FFDCA9] from-[#FAAB78] rounded-xl select-none;
+  @apply inline py-1 relative px-4 mx-4 my-1 lg:my-2 shadow-sm cursor-pointer bg-gradient-to-r to-[#FAAB78] via-50% via-[#FFDCA9] from-[#FAAB78] rounded-xl select-none hover:shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px];
 }
 </style>
 
@@ -27,7 +27,7 @@ onMounted(() => {
   gsap.fromTo(
     Skills,
     { rotateX: 180, opacity: 0 },
-    { rotateX: 0, duration: 0.8, opacity: 1, stagger: 0.2, ease: "bounce.out" }
+    { rotateX: 0, duration: 0.8, opacity: 1, stagger: 0.23, ease: "bounce.out" }
   );
 });
 </script>
