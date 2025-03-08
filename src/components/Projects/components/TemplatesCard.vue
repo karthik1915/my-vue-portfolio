@@ -1,13 +1,13 @@
 <template>
   <div class="card-wrapper container mx-auto w-full">
-    <div class="card" v-for="(project, index) in projects" :key="project.id">
+    <div class="card" v-for="(template, index) in templates" :key="template.id">
       <div
-        @click="navigateTo(project.url)"
+        @click="navigateTo(template.url)"
         class="project-image-wrapper relative group"
         :class="index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'"
       >
         <img
-          :src="'/assets/projects/' + project.image"
+          :src="'/assets/projects/' + template.image"
           alt="Project Image"
           class="project-image"
         />
@@ -15,7 +15,7 @@
           :class="index % 2 === 0 ? 'right-10' : 'left-10'"
           class="absolute bottom-10 group-hover:visible invisible transition-all duration-200 font-telegraf font-bold text mix-blend-darken text-black"
         >
-          Visit Site
+          Show Demo
           <svg
             class="inline size-4"
             width="15"
@@ -41,24 +41,24 @@
           class="flex flex-wrap gap-2 mb-3"
           :class="index % 2 === 0 ? 'lg:justify-start' : 'lg:justify-end'"
         >
-          <TagCard v-for="tag in project.tags" :key="tag.id" :tag="tag" />
+          <TagCard v-for="tag in template.tags" :key="tag.id" :tag="tag" />
         </div>
         <h3
           class="text-3xl font-telegraf tracking-wide text-primary font-semibold"
         >
-          {{ project.title }}
+          {{ template.title }}
         </h3>
         <p
           class="mt-3 text-lg font-varelaround text-notblack/80 leading-tight text-balance"
         >
-          {{ project.description }}
+          {{ template.description }}
         </p>
         <a
-          :href="project.url"
+          :href="template.url"
           target="_blank"
           class="font-telegraf inline-block mt-6 px-6 py-2 border-notblack border text-xl text-neutral-800 bg-tertiary hover:bg-background transition-all duration-300 hover:rounded-xl"
         >
-          Visit Site
+          Show Demo
         </a>
       </div>
     </div>
@@ -85,10 +85,10 @@
 
 <script>
 import TagCard from "./TagCard.vue";
-import { projectsdata } from "../data";
+import { templatesData } from "../data";
 
 export default {
-  name: "ProjectCard",
+  name: "TemplatesCard",
   components: {
     TagCard,
   },
@@ -98,7 +98,7 @@ export default {
     },
   },
   data() {
-    return { projects: projectsdata };
+    return { templates: templatesData };
   },
 };
 </script>

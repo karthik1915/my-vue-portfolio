@@ -59,28 +59,32 @@
       >
         <RouterLink
           to="/"
+          id="nav-item"
           class="w-full text-center flex items-center justify-center text-3xl py-5 bg-primary capitalize font-telegraf border-y border-black"
           @click="closeMenu"
           >Home</RouterLink
         >
         <RouterLink
           to="/about"
+          id="nav-item"
           class="w-full text-center flex items-center justify-center text-3xl py-5 bg-primary capitalize font-telegraf border-y border-black"
           @click="closeMenu"
           >About</RouterLink
         >
         <RouterLink
           to="/projects"
+          id="nav-item"
           class="w-full text-center flex items-center justify-center text-3xl py-5 bg-primary capitalize font-telegraf border-y border-black"
           @click="closeMenu"
           >Projects</RouterLink
         >
-        <RouterLink
-          to="/contact"
+        <div
+          id="nav-item"
           class="w-full text-center flex items-center justify-center text-3xl py-5 bg-primary capitalize font-telegraf border-y border-black"
-          @click="closeMenu"
-          >Contact</RouterLink
+          @click="redirectToInstagram"
         >
+          Contact
+        </div>
       </div>
     </div>
   </nav>
@@ -105,7 +109,7 @@ const isMenuOpen = ref(false);
 
 // Function to open the menu
 const openMenu = () => {
-  const PhoneLinks = gsap.utils.toArray("#phone-menu > a");
+  const PhoneLinks = gsap.utils.toArray("#nav-item");
 
   gsap.set("#phone-menu-overlay", { display: "block" });
   const tl = gsap.timeline();
@@ -141,7 +145,7 @@ const openMenu = () => {
 
 // Function to close the menu
 const closeMenu = () => {
-  const PhoneLinks = gsap.utils.toArray("#phone-menu > a");
+  const PhoneLinks = gsap.utils.toArray("#nav-item");
   const tl = gsap.timeline();
   tl.to(
     PhoneLinks,

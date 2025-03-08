@@ -1,11 +1,14 @@
 <template>
-  <div id="hero-details" class="grid grid-rows-3 sm:grid-rows-2 grid-cols-1 sm:grid-cols-2 sm:grid-flow-col mt-3">
+  <div
+    id="hero-details"
+    class="grid grid-rows-3 sm:grid-rows-2 grid-cols-1 sm:grid-cols-2 sm:grid-flow-col mt-3"
+  >
     <dl class="p-5 text-center sm:text-left">
       <dt class="text-2xl font-goodtimes">2+</dt>
       <dd class="font-semibold text-2xl font-telegraf">years Experience</dd>
     </dl>
     <dl class="p-5 text-center sm:text-left">
-      <dt class="text-2xl font-goodtimes">64</dt>
+      <dt class="text-2xl font-goodtimes">16</dt>
       <dd class="font-semibold text-2xl font-telegraf">Projects Done</dd>
     </dl>
     <RotateButton />
@@ -19,7 +22,7 @@
 </template>
 
 <style scoped>
-.grid>div {
+.grid > div {
   display: flex;
   flex-direction: column;
   align-items: start;
